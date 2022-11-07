@@ -14,11 +14,49 @@
 
 <body>
     <div class="container">
+        <div class="weather-app">
 
 
-        <h1>
-            Weather App
-        </h1>
+            <h1>
+                <span class="your-city">San Francisco </span>
+            </h1>
+            <ul>
+                <li id="today">
+                    Monday 15:00
+                </li>
+
+                <li id="description">
+                    Clear
+                </li>
+            </ul>
+            <div class="row">
+                <div class="col-6">
+                    12°C | °F<img src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png" alt="clear">
+
+
+
+                </div>
+                <div class="col-6">
+                    <ul>
+
+                        <li>
+                            Humidity: <span id="humidity"></span>%
+                        </li>
+                        <li>
+                            Wind: <span id="wind"></span> km/h
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+        <small>
+            <span class="creator"> This project was coded by Mariia Slovinska and is <a class="gitHub"
+                    href="https://github.com/slovinskamary/my-first-weather-app" target="_blank">open-sourced on
+                    GitHub</a> and <a class="gitHub" href="https://preeminent-melba-0e371b.netlify.app" target="_blank">
+                    hosted on Netlify
+                </a></span>
+        </small>
 
     </div>
     <script src="src/app.js"></script>
