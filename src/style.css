@@ -94,3 +94,24 @@ a {
 .active:hover {
   text-decoration: none;
 }
+.weather-forecast {
+  margin-top: 20px;
+  text-align: center;
+}
+.date-forecast {
+  color: rgba(39, 33, 66, 0.4);
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+}
+.temperature-forecast {
+  color: #f65282;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.5;
+}
+.temperature-forecast-min {
+  margin-left: 10px;
+  opacity: 0.5;
+}
