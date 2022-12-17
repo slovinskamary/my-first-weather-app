@@ -18,10 +18,34 @@ function formatDate(timestamp) {
     "Friday",
     "Saturday",
   ];
-  //let day = days[date.getDay()];
 
   let day = days[date.getDay()];
   return `${day} ${hours}:${minutes}`;
+}
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let forecastHTML = `<div class="row">`;
+  let days = ["Thu", "Fri", "Sat", "Sun", "Mon"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      ` <div class="col-2">
+        <div class="date-forecast">${day}</div>
+        <img
+          src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/broken-clouds-night.png"
+          alt=""
+          width="78"
+        />
+        <div class="temperature-forecast">
+          <span class="temperature-forecast-max">18°</span>
+          <span class="temperature-forecast-min">12°</span>
+        </div>
+      </div>
+    `;
+  });
+
+  forecastHTML = forecastHTML + `</div>`; //closing row
+  forecastElement.innerHTML = forecastHTML;
 }
 
 function displayTemperature(response) {
@@ -79,6 +103,7 @@ function displayCelsiusTemperature(event) {
 
 search("New York");
 let celsiusTemperature = null;
+displayForecast();
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
